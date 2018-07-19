@@ -8,7 +8,7 @@ Mentionner le contexte (cours, sigle, université, etc.).
 
 ## Auteurs
 
-Philippe Chatrand (CHAP24059408)
+- Philippe Chatrand (CHAP24059408)
 - Prénom et nom (Code permanent)
 - Prénom et nom (Code permanent)
 
@@ -33,7 +33,8 @@ les liens vers les sites officiels des dépendances s'ils existent.
 
 ## Références
 
-Citez vos sources ici, s'il y a lieu.
+- INF3135 - Notes de Cours (Alexandre Blondin-Massé)
+- INF3135 - tp2 (Alexandre Blondin-Massé)
 
 ## Division des tâches
 
@@ -43,11 +44,11 @@ complétée, les crochets avec un `X` indique que la tâche est complétée).
 Même si vous travaillez seul, indiquez les tâches que vous avez accomplies
 (cela permet de structurer le développement).
 
-- [ ] Programmation du menu principal (Alice)
-- [X] Conception des plateformes (Charlie)
-- [ ] Gestion des collisions (Charlie)
-- [ ] Gestion des feuilles de sprites (Alice)
-- [ ] Ajout de sons (Charlie)
+- [ ] Coquille de base (Phil)
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
 
   - [ ] lorsque le personnage saute;
   - [ ] lorsque le personnage atterrit;
