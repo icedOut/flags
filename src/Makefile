@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -std=c11 -W -Wall `pkg-config --cflags --libs jansson`
+CFLAGS = -g -std=c11 -W -Wall `pkg-config --cflags --libs jansson` `pkg-config --cflags cunit`
 LFLAGS = -ljansson
 EXEC = tp3
 TEST_IMPL = $(wildcard test*.c)
