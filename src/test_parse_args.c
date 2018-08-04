@@ -24,7 +24,7 @@ void test_size_short_options() {
                      "--show-flags" , NULL};
     int argc = 5 ;
     struct Arguments *arguments = parse_arguments(argc, argv);
-    CU_ASSERT_EQUAL(arguemnts->show_languages,  true);
+    CU_ASSERT_EQUAL(arguments->show_languages,  true);
     CU_ASSERT_EQUAL(arguments->show_capitals,   true);
     CU_ASSERT_EQUAL(arguments->show_borders,    true);
     CU_ASSERT_EQUAL(arguments->show_flags,      true);
@@ -33,14 +33,14 @@ void test_size_short_options() {
 
 void test_size_long_options() {
     char *argv[] = {"bin/tp3", "--country", "can",  "--region", "oceania", "--output-filename", "test", 
-                    "--output-format", "png", NULL };
-    int  argc = 9 ;
-    struct Arguments *arguments = parse_arguments(argc, argv);
-    CU_ASSERT_EQUAL(arguments->region ,  OCEANIA );
-    CU_ASSERT_EQUAL(arguments->format , PNG );
-    CU_ASSERT_STRING_EQUAL(arguments->country, "can");
-    CU_ASSERT_STRING_EQUAL(arguments->filename, "test");
-    free_arguments(arguments);
+                     "--output-format", "png", NULL };
+     int  argc = 9 ;
+     struct Arguments *arguments = parse_arguments(argc, argv);
+     CU_ASSERT_STRING_EQUAL(arguments->filename, "test");
+     CU_ASSERT_STRING_EQUAL(arguments->country, "can");
+     CU_ASSERT_EQUAL(arguments->region, OCEANIA );
+     CU_ASSERT_EQUAL(arguments->format, PNG);
+     free_arguments(arguments);
 }
 
 
