@@ -11,6 +11,7 @@ d'été de l'UQAM
 ## Auteurs
 
 - Philippe Chatrand (CHAP24059408)
+
 - Saad Agunaou
 
 
@@ -41,7 +42,7 @@ Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs infor
 
 - [x] Coquille de base (Phil)
 - [x] Parsage des arguments (Phil)
-- [ ] Tests parsage (Phil) 
+- [x] Tests parsage arguments (Phil) 
 - [ ] Parsage JSON (Saad)
 - [ ] 
 
