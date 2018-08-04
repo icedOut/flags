@@ -23,7 +23,11 @@ html:
 source:
 	make -C $(SRC_DIR)
 
-test: exec testcunit
+test: exec testbin testcunit
+
+testbin: source bindir
+		$(MAKE) test -C $(SRC_DIR)
+		cp $(TEST_EXEC) $(BIN_DIR)
 
 testcunit:
 	set -e; \

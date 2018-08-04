@@ -26,8 +26,9 @@ clean:
 exec: $(EXEC)
 	./$(EXEC)
 
-test: $(TEST_EXEC)
+test: $(TEST_OBJS) $(TEST_EXEC)
 
-$(TEST_EXEC): $(CC)  $@.o $(AUXI_OBJS) $(LFLAGS) `pkg-config --libs cunit` -o $@
+$(TEST_EXEC): $(Test_OBJS) $(AUXI_OBJS)
+			$(CC)  $@.o $(AUXI_OBJS) $(LFLAGS) `pkg-config --libs cunit` -o $@
 
 
