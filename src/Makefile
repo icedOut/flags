@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -g -std=c11 -W -Wall `pkg-config --cflags --libs jansson` `pkg-config --cflags cunit`
+CFLAGS = -g -std=c11 -W -Wall `pkg-config --cflags --libs jansson`
 LFLAGS = -ljansson
 EXEC = tp3
 TEST_IMPL = $(wildcard test*.c)
@@ -26,6 +26,8 @@ clean:
 exec: $(EXEC)
 	./$(EXEC)
 
+test: $(TEST_EXEC)
 
+$(TEST_EXEC): $(CC)  $@.o $(AUXI_OBJS) $(LFLAGS) `pkg-config --libs cunit` -o $@
 
 
