@@ -1,6 +1,8 @@
 SRC_DIR = src
 BIN_DIR = bin
 EXEC = tp3
+TEST_EXEC = $(patsubst %.c,%,$(wildcard $(SRC_DIR)/test*.c))
+
 
 .PHONY: exec bindir clean html source test testbats testbin testcunit
 
@@ -20,3 +22,15 @@ html:
 
 source:
 	make -C $(SRC_DIR)
+
+test: exec testbin testcunit
+
+testbin: source bindir
+		$(MAKE) test -C $(SRC_DIR)
+		cp $(TEST_EXEC) $(BIN_DIR)
+
+testcunit:
+	set -e; \
+	for test in `ls $(BIN_DIR)/test*` ; do \
+		$$test; \
+	done

@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <getopt.h>
 #include "parse_args.h"
+#include "utils.h"
+
 
 
 #define DELIM ','
@@ -53,7 +55,7 @@ enum Status get_country(const char *s,
 	if (strlen(s) > 4){
 		return TP3_WRONG_COUNTRY;
 	}else{
-	strcpy(arguments->country , s);
+	arguments->country = strdupli(s);
 	return TP3_OK;
 	}
 }
@@ -70,7 +72,7 @@ enum Status get_filename(const char *s,
 						  struct Arguments *arguments){
 	if (strlen(s)> 30) return TP3_WRONG_FILENAME;
 	else{
-	strcpy( arguments->filename , s);
+	arguments->filename = strdupli(s);
 	return TP3_OK;
 	}
 }
@@ -134,6 +136,7 @@ struct Arguments *parse_arguments(int argc, char *argv[]) {
     	{"show-languages",	no_argument,		0,'l'},
     	{"show-flags",		no_argument,		0,'f'},
     	{"show-borders",	no_argument,		0,'b'},
+        {"show-capital",    no_argument,        0,'d'},
     	//Don't set flag
     	{"region",			required_argument,	0,'r'},
     	{"country",			required_argument,	0,'c'},
@@ -145,7 +148,7 @@ struct Arguments *parse_arguments(int argc, char *argv[]) {
     // Parse options
     while (true) {
     	int option_index = 0;
-    	int c = getopt_long(argc, argv, "hlfbr:c:o:u:",
+    	int c = getopt_long(argc, argv, "hlfbdr:c:o:u:",
     						long_opts, &option_index);
     	if (c == -1) break;
     	switch (c) {
@@ -157,6 +160,8 @@ struct Arguments *parse_arguments(int argc, char *argv[]) {
     	    		  break;
     	    case 'b': arguments->show_borders = true;
     	    		  break;
+            case 'd': arguments->show_capitals = true;
+                      break;
     	    case 'r': if (arguments->status == TP3_OK ){
     	    		   arguments->status =
     	    		   		get_region(optarg, arguments);

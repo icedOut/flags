@@ -1,2 +1,6 @@
 tp3
 *.html
+*.o
+bin/
+test_parse_args
+
