@@ -7,7 +7,15 @@
 #include "CUnit/Basic.h"
 
 void test_default() {
-   
+    char *argv[] = {"bin/tp3", NULL};
+    int argc = 1;
+    struct Arguments *arguments = parse_arguments(argc, argv);
+    CU_ASSERT_EQUAL(arguments->show_languages,  false);
+    CU_ASSERT_EQUAL(arguments->show_capitals,   false);
+    CU_ASSERT_EQUAL(arguments->show_borders,    false);
+    CU_ASSERT_EQUAL(arguments->show_flags,      false);
+    CU_ASSERT_EQUAL(arguments->format,          TEXT);
+    CU_ASSERT_EQUAL(arguments->region,          ALL);
 }
 
 void test_size_short_options() {
