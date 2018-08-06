@@ -19,7 +19,7 @@
 struct Pays{
 	char *country;			/**< country code */
 	char *country_code;		/**< 3 letter country codde */
-	enum Region region;		/**< Contient of the coutry */
+	char *region;		    /**< Contient of the coutry */
 	char *capital;			/**< Capital of the country */
 	char *flag;				/**< Flag of the country */
 	char *borders[]; 		/**< Borders of the country */

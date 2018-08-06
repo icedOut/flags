@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include "parse_args.h"
 #include "pays.h"
+#include "utils.h"
 #include <jansson.h>
+#define NOMBRE_PAYS 250
 
 int main(int argc, char **argv) {
 
@@ -12,6 +14,7 @@ int main(int argc, char **argv) {
 	json_error_t error;
 	size_t i;
 
+// PASRSAGE DU FICHIER COUNTRIES.JSON
 
 	if(arguments->status != TP3_OK) {
 		return arguments->status;
@@ -33,8 +36,13 @@ int main(int argc, char **argv) {
     return 1;
 	}
 
+	// INITIALISATION DU TABLEAU DE PAYS
+	struct Pays liste[NOMBRE_PAYS];	
+
+	// INSERTION DES PAYS DANS UN TABLEAU LOCAL
+
 	for(i = 0; i < json_array_size(root); i++){
-    json_t *data, *nom, *common, *capitale;
+    json_t *data, *nom, *common, *region;
     const char *message_text;
 
     data = json_array_get(root, i);
@@ -50,17 +58,31 @@ int main(int argc, char **argv) {
     	fprintf( stderr , "Erreur de nom");
     	return 1;
     }
-     common = json_object_get(nom,"common");
+    common = json_object_get(nom,"common");
     if(!json_is_string(common)){
     	fprintf(stderr, "Erreur de nom commun");	
    	    return 1;
     }
+  	
+  	region = json_object_get(data,"region");
+  	if(!json_is_string(region)){
+  		fprintf(stderr, "Erreur de région");
+  		return 1;
+  	}
+
+
     message_text = json_string_value(common);
     printf("%s\n",message_text);
+    liste[i].country = strdupli(message_text);
 
+    message_text = json_string_value(region);
+    liste[i].region = strdupli(message_text);
 	}
 	free_arguments(arguments);
+	printf("%s \n",liste[249].country); // TEST
+	printf("%s \n", liste[249].region); // TEST
 	return 0;
+
 	}
 
 }
