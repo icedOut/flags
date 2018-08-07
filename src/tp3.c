@@ -200,7 +200,8 @@ switch(arguments->format){
 				printf("%s ", liste[j].borders[k]);
 				}
 				printf("\n");
-				}	
+				}
+			printf("\n");		
 		 	}
 		 }
 		 	break;
@@ -226,7 +227,8 @@ switch(arguments->format){
 				printf("%s ", liste[j].borders[k]);
 				}
 				printf("\n");
-				}	
+				}
+			printf("\n");		
 		 	}
 
 		 	}
@@ -254,6 +256,7 @@ switch(arguments->format){
 				}
 				printf("\n");
 				}	
+			printf("\n");	
 		 	}
 		 }
 		break;
@@ -280,6 +283,7 @@ switch(arguments->format){
 				}
 				printf("\n");
 				}	
+			printf("\n");
 		 	}		 	
 
 		 }
@@ -306,7 +310,8 @@ switch(arguments->format){
 				printf("%s ", liste[j].borders[k]);
 				}
 				printf("\n");
-				}	
+				}
+			printf("\n");		
 		 	}		 	
 
 		 }
@@ -333,8 +338,7 @@ switch(arguments->format){
 				}
 				printf("\n");
 				}	
-		 			 	
-
+		 printf("\n");		 	
 		 }
 		 break;
 
