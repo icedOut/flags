@@ -12,18 +12,20 @@ d'été de l'UQAM
 
 - Philippe Chatrand (CHAP24059408)
 
-- Saad Agunaou
 
 
 ## Fonctionnement
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`
+
 
 
 ## Plateformes supportées
 
 -Linux
+
 -Mac os
 
 
