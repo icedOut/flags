@@ -18,7 +18,11 @@ d'été de l'UQAM
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
-Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`
+Pour compiler le programme, entrez la commande `make`
+
+Pour lancer la série de test, entrez la commande `make test`
+
+Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
 
 
 
