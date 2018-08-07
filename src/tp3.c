@@ -44,9 +44,8 @@ int main(int argc, char **argv) {
 	// INSERTION DES INFORMATIONS DES PAYS DANS UN TABLEAU LOCAL
 
 for(i = 0; i < json_array_size(root); i++){
-    json_t *data, *nom, *common, *region , *code , *flag , *capitalArray , *capital , *borderArray , *border;
+    json_t *data, *nom, *common, *region , *code , *flag , *capitalArray , *language, *languageObject ,*capital , *borderArray , *border;
     const char *message_text;
-
     data = json_array_get(root, i);
     if(!json_is_object(data)){
     
@@ -83,6 +82,19 @@ for(i = 0; i < json_array_size(root); i++){
   		fprintf(stderr, "Erreur de drapeau");
   		return 1;
   	}
+  	int nb_languages = 0 ;
+  	languageObject = json_object_get(data,"languages");
+  	void *iter = json_object_iter(languageObject);
+  	while(iter){
+  	language = json_object_iter_value(iter);
+  	message_text = json_string_value(language);
+  	liste[i].languages[nb_languages] = strdupli(message_text);
+  	nb_languages ++;
+  	iter = json_object_iter_next(languageObject, iter);
+  	}
+  	liste[i].nb_languages = nb_languages;
+  
+
 
   	capitalArray = json_object_get(data,"capital");
   	if(!json_is_array(capitalArray)){
@@ -107,7 +119,6 @@ for(i = 0; i < json_array_size(root); i++){
     }
     liste[i].nb_borders = nb_borders;
     message_text = json_string_value(common);
-    printf("%s\n",message_text);
     liste[i].country = strdupli(message_text);
 
     message_text = json_string_value(region);
@@ -132,6 +143,7 @@ for(i = 0; i < json_array_size(root); i++){
 	printf(" Flag:%s \n",liste[249].flag); // 		TEST
 	printf(" Capital: %s \n",liste[249].capital); // 		TEST
 	printf(" %d Borders: %s %s %s %s  \n",liste[249].nb_borders, liste[249].borders[0],liste[249].borders[1],liste[249].borders[2],liste[249].borders[3]); // TEST
+	printf(" %d Languages : %s et %s \n",liste[249].nb_languages, liste[249].languages[0], liste[249].languages[1]);
 	return 0;
 
 	}
