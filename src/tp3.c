@@ -98,11 +98,15 @@ for(i = 0; i < json_array_size(root); i++){
     if(!json_is_array(borderArray)){
     	printf("Erreur: BorderArray");
     }
+    int nb_borders = 0;
     for (c = 0; c < json_array_size(borderArray); c++){
     border = json_array_get(borderArray,c);
     message_text = json_string_value(border);
     liste[i].borders[c] =  strdupli(message_text);
+    nb_borders ++;
     }
+    liste[i].nb_borders = nb_borders ;
+
     message_text = json_string_value(common);
     printf("%s\n",message_text);
     liste[i].country = strdupli(message_text);
@@ -124,11 +128,11 @@ for(i = 0; i < json_array_size(root); i++){
 	free_arguments(arguments);
 	printf("\nTEST : PAYS # 259 : \n"); // 		TEST
 	printf(" Pays : %s \n",liste[249].country); //  	TEST
-	printf(" Region :%s \n", liste[249].region); // 		 TEST
+	printf(" Region : %s \n", liste[249].region); // 		 TEST
 	printf(" Code: %s \n", liste[249].country_code); // TEST
 	printf(" Flag:%s \n",liste[249].flag); // 		TEST
 	printf(" Capital: %s \n",liste[249].capital); // 		TEST
-	printf(" Borders: %s %s %s %s  \n",liste[249].borders[0],liste[249].borders[1],liste[249].borders[2],liste[249].borders[3]); // TEST
+	printf(" %d Borders: %s %s %s %s  \n",liste[249].nb_borders, liste[249].borders[0],liste[249].borders[1],liste[249].borders[2],liste[249].borders[3]); // TEST
 	return 0;
 
 	}
