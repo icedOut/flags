@@ -26,7 +26,7 @@ Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
 
 Il est possible d'ajouter plusieurs options a l'éxécution du programme:
 
-
+`
 Usage: bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]\n\
  	[--show-languages] [--show-capital] [--show-borders] [--show-flag]\n\
  	[--country COUNTRY] [--region REGION]\n\
@@ -42,13 +42,13 @@ Usage: bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]\n\
   							 pour le format PNG. Si non spécifié en mode TEXT ou dot,
   							 le programme affichera sur la sortie standard.
   							 
-  --show-languages           afficher les langues parlées du pays
+  --show-languages             afficher les langues parlées du pays
   
-  --show-capital             afficher les capitales
+  --show-capital                 afficher les capitales
   
-  --show-borders             afficher les frontières avec les autres pays
+  --show-borders              afficher les frontières avec les autres pays
   
-  --show-flag                afficher le drapeau du pays
+  --show-flag                    afficher le drapeau du pays
                              (seulement pour DOT et PNG)
                              
   --country COUNTRY          le code du pays a afficher ( ex : can , usa );
@@ -56,7 +56,7 @@ Usage: bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]\n\
   --region REGION            le continent a afficher
                              les continents supportées sont 
                              americas, africa, asia , europe et oceania
-
+`
 
 
 
