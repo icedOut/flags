@@ -146,7 +146,7 @@ switch(arguments->format){
 	case TEXT:
 	 if(arguments->country != NULL){
 
-	 for (j=0; j<250;j++){	
+	 for (j=0; j<NOMBRE_PAYS;j++){	
 	 if(strcasecmp(arguments->country,liste[j].country_code) == 0 ){
 	 	code_is_valid = true;
 	 	printf("Nom : %s\n", liste[j].country);
@@ -180,7 +180,7 @@ switch(arguments->format){
 	else{	
 		 switch (arguments->region){
 		 	case AFRICA:
-		 	for (j=0;j<250;j++){
+		 	for (j=0;j<NOMBRE_PAYS;j++){
 		 		if(strcasecmp("Africa",liste[j].region) == 0){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
@@ -207,7 +207,7 @@ switch(arguments->format){
 		 	break;
 
 		 	case AMERICAS:
-		 	for (j=0;j<250;j++){
+		 	for (j=0;j<NOMBRE_PAYS;j++){
 		 		if(strcasecmp("Americas",liste[j].region) == 0){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
@@ -235,7 +235,7 @@ switch(arguments->format){
 		 	break;
 
 		 	case ASIA:
-		 	for (j=0;j<250;j++){
+		 	for (j=0;j<NOMBRE_PAYS;j++){
 		 		if(strcasecmp("Asia",liste[j].region) == 0){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
@@ -262,7 +262,7 @@ switch(arguments->format){
 		break;
 
 			case EUROPE:
-			for (j=0;j<250;j++){
+			for (j=0;j<NOMBRE_PAYS;j++){
 		 		if(strcasecmp("Europe",liste[j].region) == 0){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
@@ -290,7 +290,7 @@ switch(arguments->format){
 		 break;
 
 		 	case OCEANIA:
-		 	for (j=0;j<250;j++){
+		 	for (j=0;j<NOMBRE_PAYS;j++){
 		 		if(strcasecmp("Oceania",liste[j].region) == 0){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
@@ -318,7 +318,7 @@ switch(arguments->format){
 		 break;
 
 		 	case ALL:
-		 	for (j=0;j<250;j++){
+		 	for (j=0;j<NOMBRE_PAYS;j++){
 		 		printf("Nom : %s\n", liste[j].country);
 				printf("Code : %s\n", liste[j].country_code);
 				if(arguments->show_capitals){
@@ -341,13 +341,10 @@ switch(arguments->format){
 		 printf("\n");		 	
 		 }
 		 break;
-
 		}
-
-	}
-	
-			
+	}	
 	break;
+
 	case DOT:
 	printf(" en cour de développement \n");
 	break;
@@ -355,23 +352,9 @@ switch(arguments->format){
 	case PNG:
 	printf(" en cour de développement \n");
 	break;
-
 }
-
-
 	free_arguments(arguments);
-	/*printf("\nTEST : PAYS # 259 : \n"); // 		TEST
-	printf(" Pays : %s \n",liste[249].country); //  	TEST
-	printf(" Region : %s \n", liste[249].region); // 		 TEST
-	printf(" Code: %s \n", liste[249].country_code); // TEST
-	printf(" Flag:%s \n",liste[249].flag); // 		TEST
-	printf(" Capital: %s \n",liste[249].capital); // 		TEST
-	printf(" %d Borders: %s %s %s %s  \n",liste[249].nb_borders, liste[249].borders[0],liste[249].borders[1],liste[249].borders[2],liste[249].borders[3]); // TEST
-	printf(" %d Languages : %s et %s \n",liste[249].nb_languages, liste[249].languages[0], liste[249].languages[1]);
-	*/
 	return 0;
-
-
 	}
 
 }
