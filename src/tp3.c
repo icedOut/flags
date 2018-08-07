@@ -1,6 +1,10 @@
 #include <stdio.h>
+#include <string.h>
+#include <strings.h>
 #include "parse_args.h"
 #include "pays.h"
+#include <string.h>
+#include <stdbool.h>
 #include "utils.h"
 #include <jansson.h>
 #define NOMBRE_PAYS 250
@@ -20,15 +24,11 @@ int main(int argc, char **argv) {
 	if(arguments->status != TP3_OK) {
 		return arguments->status;
 	} else {
-		printf("Arguments OK \n");
-	
 	root = json_load_file(url, 0, &error);
 
 	if(!root) {
 		 fprintf(stderr, "Erreur de parsage \n");
 		 return 1;
-	}else{
-		printf("JSON Parsé avec succès \n");
 	}
 	if(!json_is_array(root))
 	{
@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
 
 	struct Pays liste[NOMBRE_PAYS];	
 
-	// INSERTION DES INFORMATIONS DES PAYS DANS UN TABLEAU LOCAL
+	// INSERTION DES INFORMATIONS DES PAYS DANS LE TABLEAU
 
 for(i = 0; i < json_array_size(root); i++){
     json_t *data, *nom, *common, *region , *code , *flag , *capitalArray , *language, *languageObject ,*capital , *borderArray , *border;
@@ -71,7 +71,7 @@ for(i = 0; i < json_array_size(root); i++){
   		return 1;
   	}
 
-  	code = json_object_get(data,"cca2");
+  	code = json_object_get(data,"cca3");
   	if(!json_is_string(code)){
   		fprintf(stderr, "Erreur de code de pays");
   		return 1;
@@ -135,8 +135,228 @@ for(i = 0; i < json_array_size(root); i++){
     liste[i].capital = strdupli(message_text);	
     } 
 }
+
+
+// AFFICHAGE DES PAYS SELON LES ARGUMENTS
+
+int j,k;
+bool code_is_valid = false;
+switch(arguments->format){
+
+	case TEXT:
+	 if(arguments->country != NULL){
+
+	 for (j=0; j<250;j++){	
+	 if(strcasecmp(arguments->country,liste[j].country_code) == 0 ){
+	 	code_is_valid = true;
+	 	printf("Nom : %s\n", liste[j].country);
+		printf("Code : %s\n", liste[j].country_code);
+		if(arguments->show_capitals){
+		printf("Capital: %s\n", liste[j].capital);
+		}
+		if(arguments->show_languages){
+		printf("Languages: ");
+		for(k=0; k<liste[j].nb_languages; k++){
+		printf("%s ", liste[j].languages[k]);	
+		}
+		printf("\n");
+		}
+		if(arguments->show_borders){
+		printf("Borders: ");
+		for(k=0;k<liste[j].nb_borders; k++){
+		printf("%s ", liste[j].borders[k]);
+		}
+		printf("\n");
+		}
+	 }
+
+	}
+	 if (!code_is_valid){
+	 	fprintf(stderr,"Le code de pays entrée est invalide");
+	 	return 1;
+	    }
+	} 
+	
+	else{	
+		 switch (arguments->region){
+		 	case AFRICA:
+		 	for (j=0;j<250;j++){
+		 		if(strcasecmp("Africa",liste[j].region) == 0){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 	}
+		 }
+		 	break;
+
+		 	case AMERICAS:
+		 	for (j=0;j<250;j++){
+		 		if(strcasecmp("Americas",liste[j].region) == 0){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 	}
+
+		 	}
+		 	break;
+
+		 	case ASIA:
+		 	for (j=0;j<250;j++){
+		 		if(strcasecmp("Asia",liste[j].region) == 0){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 	}
+		 }
+		break;
+
+			case EUROPE:
+			for (j=0;j<250;j++){
+		 		if(strcasecmp("Europe",liste[j].region) == 0){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 	}		 	
+
+		 }
+		 break;
+
+		 	case OCEANIA:
+		 	for (j=0;j<250;j++){
+		 		if(strcasecmp("Oceania",liste[j].region) == 0){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 	}		 	
+
+		 }
+		 break;
+
+		 	case ALL:
+		 	for (j=0;j<250;j++){
+		 		printf("Nom : %s\n", liste[j].country);
+				printf("Code : %s\n", liste[j].country_code);
+				if(arguments->show_capitals){
+				printf("Capital: %s\n", liste[j].capital);
+				}
+				if(arguments->show_languages){
+				printf("Languages: ");
+				for(k=0; k<liste[j].nb_languages; k++){
+				printf("%s ", liste[j].languages[k]);	
+				}
+				printf("\n");
+				}
+				if(arguments->show_borders){
+				printf("Borders: ");
+				for(k=0;k<liste[j].nb_borders; k++){
+				printf("%s ", liste[j].borders[k]);
+				}
+				printf("\n");
+				}	
+		 			 	
+
+		 }
+		 break;
+
+		}
+
+	}
+	
+			
+	break;
+	case DOT:
+	printf(" en cour de développement \n");
+	break;
+
+	case PNG:
+	printf(" en cour de développement \n");
+	break;
+
+}
+
+
 	free_arguments(arguments);
-	printf("\nTEST : PAYS # 259 : \n"); // 		TEST
+	/*printf("\nTEST : PAYS # 259 : \n"); // 		TEST
 	printf(" Pays : %s \n",liste[249].country); //  	TEST
 	printf(" Region : %s \n", liste[249].region); // 		 TEST
 	printf(" Code: %s \n", liste[249].country_code); // TEST
@@ -144,7 +364,9 @@ for(i = 0; i < json_array_size(root); i++){
 	printf(" Capital: %s \n",liste[249].capital); // 		TEST
 	printf(" %d Borders: %s %s %s %s  \n",liste[249].nb_borders, liste[249].borders[0],liste[249].borders[1],liste[249].borders[2],liste[249].borders[3]); // TEST
 	printf(" %d Languages : %s et %s \n",liste[249].nb_languages, liste[249].languages[0], liste[249].languages[1]);
+	*/
 	return 0;
+
 
 	}
 
