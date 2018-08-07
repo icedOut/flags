@@ -9,8 +9,6 @@
 #include <stdbool.h>
 #include "parse_args.h"
 
-#define URL_COUNTRIES "https://github.com/mledoze/countries/blob/master/countries.json"
-#define URL_SIZE     256
 
 // --------- //
 // --TYPES-- //
@@ -22,7 +20,7 @@ struct Pays{
 	char *region;		    /**< Contient of the coutry */
 	char *capital;			/**< Capital of the country */
 	char *flag;				/**< Flag of the country */
-	char *borders[]; 		/**< Borders of the country */
+	char *borders[10]; 		/**< Borders of the country */
 };
 
 
