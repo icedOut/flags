@@ -12,18 +12,24 @@ d'été de l'UQAM
 
 - Philippe Chatrand (CHAP24059408)
 
-- Saad Agunaou
 
 
 ## Fonctionnement
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Pour compiler le programme, entrez la commande `make`
+
+Pour lancer la série de test, entrez la commande `make test`
+
+Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
+
 
 
 ## Plateformes supportées
 
 -Linux
+
 -Mac os
 
 
