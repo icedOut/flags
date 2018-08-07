@@ -105,8 +105,7 @@ for(i = 0; i < json_array_size(root); i++){
     liste[i].borders[c] =  strdupli(message_text);
     nb_borders ++;
     }
-    liste[i].nb_borders = nb_borders ;
-
+    liste[i].nb_borders = nb_borders;
     message_text = json_string_value(common);
     printf("%s\n",message_text);
     liste[i].country = strdupli(message_text);

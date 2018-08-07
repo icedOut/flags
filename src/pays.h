@@ -21,7 +21,9 @@ struct Pays{
 	char *capital;			/**< Capital of the country */
 	char *flag;				/**< Flag of the country */
 	char *borders[10]; 		/**< Borders of the country */
+	char *languages[25];	/**< Languages of the country */
 	int  nb_borders ; 		/**< Number of borders the country has */
+	int  nb_languages ; 	/**< Number of languages the country has */
 };
 
 
