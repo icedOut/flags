@@ -28,11 +28,7 @@ Il est possible d'ajouter plusieurs options a l'éxécution du programme:
 
 # UTILISATION
 
-`bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]
-
- 	[--show-languages] [--show-capital] [--show-borders] [--show-flag]
- 	
- 	[--country COUNTRY] [--region REGION]`
+  `bin/tp3 [--help] [--output-format FORMAT][--output-filename FILENAME] [--show-languages] [--show-capital] [--show-borders] [--show-flag] [--country COUNTRY] [--region REGION]`
 
 ## ARGUMENTS OPTIONNELS
 
