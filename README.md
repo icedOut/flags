@@ -12,18 +12,76 @@ d'été de l'UQAM
 
 - Philippe Chatrand (CHAP24059408)
 
-- Saad Agunaou
 
 
 ## Fonctionnement
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Pour compiler le programme, entrez la commande `make`
+
+Pour lancer la série de test, entrez la commande `make test`
+
+Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
+
+Il est possible d'ajouter plusieurs options a l'éxécution du programme:
+
+# UTILISATION
+
+`bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]
+
+ 	[--show-languages] [--show-capital] [--show-borders] [--show-flag]
+ 	
+ 	[--country COUNTRY] [--region REGION]`
+
+
+
+####  --help                 
+
+Affiche le message d'aide et quitte 
+
+#### --output-format FORMAT    
+
+Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
+                             
+#### --output-filename FILENAME 
+
+le nom du fichier sortant. Cet argument est obligatoire
+ pour le format PNG. Si non spécifié en mode TEXT ou dot,
+ le programme affichera sur la sortie standard.
+  							 
+#### --show-languages     
+  
+  afficher les langues parlées du pays
+  
+#### --show-capital                 
+
+afficher les capitales
+  
+#### --show-borders            
+
+afficher les frontières avec les autres pays
+  
+#### --show-flag                
+
+afficher le drapeau du pays (seulement pour DOT et PNG)
+                             
+#### --country COUNTRY         
+
+le code du pays a afficher ( ex : can , usa );
+  
+#### --region REGION           
+
+le continent a afficher les continents supportées sont 
+americas, africa, asia , europe et oceania
+
+
 
 
 ## Plateformes supportées
 
 -Linux
+
 -Mac os
 
 
