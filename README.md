@@ -18,6 +18,8 @@ d'été de l'UQAM
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Le programme 
+
 Pour compiler le programme, entrez la commande `make`
 
 Pour lancer la série de test, entrez la commande `make test`
@@ -105,6 +107,7 @@ Pour conserver les traces en version texte, utiliser plutot
 
 - INF3135 - Notes de Cours (Alexandre Blondin-Massé)
 - INF3135 - tp2 (Alexandre Blondin-Massé)
+- [project COUNTRIES](https://github.com/mledoze/countries)
 
 ## Division des tâches
 
