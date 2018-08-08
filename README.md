@@ -34,7 +34,7 @@ Il est possible d'ajouter plusieurs options a l'éxécution du programme:
  	
  	[--country COUNTRY] [--region REGION]`
 
-
+## ARGUMENTS OPTIONNELS
 
 ####  --help                 
 
@@ -87,8 +87,9 @@ americas, africa, asia , europe et oceania
 
 ## Dépendances
 
--bibliothèque Jansson
--bibliothèque CUNIT (tests)
+- [bibliothèque Jansson](http://www.digip.org/jansson/)
+
+-[bibliothèque CUNIT (tests)](http://cunit.sourceforge.net/)
 
 ## Références
 
