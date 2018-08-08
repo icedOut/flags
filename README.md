@@ -18,6 +18,8 @@ d'été de l'UQAM
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Le programme 
+
 Pour compiler le programme, entrez la commande `make`
 
 Pour lancer la série de test, entrez la commande `make test`
@@ -28,11 +30,7 @@ Il est possible d'ajouter plusieurs options a l'éxécution du programme:
 
 # UTILISATION
 
-`bin/tp3 [--help] [--output-format FORMAT] [--output-filename FILENAME]
-
- 	[--show-languages] [--show-capital] [--show-borders] [--show-flag]
- 	
- 	[--country COUNTRY] [--region REGION]`
+  `bin/tp3 [--help] [--output-format FORMAT] [--show-languages] [--show-capital] [--show-borders] [--show-flag] [--country COUNTRY] [--region REGION]`
 
 ## ARGUMENTS OPTIONNELS
 
@@ -44,12 +42,7 @@ Affiche le message d'aide et quitte
 
 Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
                              
-#### --output-filename FILENAME 
 
-le nom du fichier sortant. Cet argument est obligatoire
- pour le format PNG. Si non spécifié en mode TEXT ou dot,
- le programme affichera sur la sortie standard.
-  							 
 #### --show-languages     
   
   afficher les langues parlées du pays
@@ -75,8 +68,24 @@ le code du pays a afficher ( ex : can , usa );
 le continent a afficher les continents supportées sont 
 americas, africa, asia , europe et oceania
 
+		 
+
+## Rediriger la sortie vers un nouveau fichier
+
+#### NOMFICHIER 
+le nom du fichier sortant. 
+
+ Ceci n'est pas un argument a utiliser pour appeler le programme,
+mais plutôt utiliser lors d'un appel avec redirection :
+par exemple, si vous voulez conservez les informations du canada en format dot, entrez la commende:
 
 
+` bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.dot`
+
+Pour conserver les traces en version texte, utiliser plutot
+
+
+` bin/tp3 --output-format text --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.txt`
 
 ## Plateformes supportées
 
@@ -98,6 +107,7 @@ americas, africa, asia , europe et oceania
 
 - INF3135 - Notes de Cours (Alexandre Blondin-Massé)
 - INF3135 - tp2 (Alexandre Blondin-Massé)
+- [project COUNTRIES](https://github.com/mledoze/countries)
 
 ## Division des tâches
 
