@@ -102,11 +102,16 @@ americas, africa, asia , europe et oceania
 ## Division des tâches
 
 
-- [x] Coquille de base (Phil)
-- [x] Parsage des arguments (Phil)
-- [x] Tests parsage arguments (Phil) 
-- [ ] Parsage JSON (Saad)
-- [ ] 
+- [x] Coquille de base 
+- [x] Makefile
+- [x] Parsage des arguments 
+- [x] Tests parsage arguments 
+- [x] Parsage JSON 
+- [x] Tests bats 
+- [x] Affichage Text
+- [x] Affichage dot
+- [] Affichage PNG
+
 
  
 
