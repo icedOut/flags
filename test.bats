@@ -46,4 +46,14 @@ BATS_TMPDIR="./tmp"
 	run bin/tp3 --show-languages --region oceania
 	[ "$status" -eq 0 ]
 	[ "${lines[0]}" = "Nom : American Samoa" ]
+	[ "${lines[1]}" = "Code : ASM" ]
+
+}
+
+
+@test "Option format dot" {
+	run bin/tp3 --output-format dot --country can
+	[ "$status" -eq 0 ]
+	[ "${lines[0]}" = "graph { " ]
+	[ "${lines[1]}"  =  "   shape = none," ]
 }
