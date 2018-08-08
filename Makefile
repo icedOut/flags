@@ -1,6 +1,7 @@
 SRC_DIR = src
 BIN_DIR = bin
 EXEC = tp3
+BATS_FILE = test.bats
 TEST_EXEC = $(patsubst %.c,%,$(wildcard $(SRC_DIR)/test*.c))
 
 
@@ -23,7 +24,10 @@ html:
 source:
 	make -C $(SRC_DIR)
 
-test: exec testbin testcunit
+test: exec testbin testcunit testbats
+
+testbats:
+		bats $(BATS_FILE)	
 
 testbin: source bindir
 		$(MAKE) test -C $(SRC_DIR)
