@@ -390,12 +390,10 @@ switch(arguments->format){
 switch(arguments->region){
 
 		case AFRICA:
-		
+		printf("graph { \n");
 		for (j=0; j<NOMBRE_PAYS;j++){
-
 		if(strcasecmp("Africa",liste[j].region) == 0){
-		printf ("graph { \n");
-		printf ("   %s [\none", liste[j].country_code);
+		printf(" %s [ \n",liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
@@ -423,16 +421,15 @@ switch(arguments->region){
 			}	
 			printf("</table>>\n");	
 			printf("];\n");
-			printf("}");
-		}	
+		}
+		printf("}");	
 	}
 	break;
 
 		case AMERICAS:
-		
+		printf("graph { \n");
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Americas",liste[j].region) == 0){
-		printf ("graph { \n");
 		printf ("   %s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -460,16 +457,16 @@ switch(arguments->region){
 			}	
 			printf("</table>>\n");	
 			printf("];\n");
-			printf("}");
-		}	
+		}
+		
 	}
+	printf("}");	
 	break;
 
 		case ASIA:
-		
+		printf ("graph { \n");
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Asia",liste[j].region) == 0){
-		printf ("graph { \n");
 		printf ("%s [\n", liste[j].country_code);	
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -497,17 +494,18 @@ switch(arguments->region){
 			}	
 			printf("</table>>\n");	
 			printf("];\n");
-			printf("}");
-		}	
+			
+		}
+			
 	}
+	printf("}");
 	break;
 
 		case EUROPE:
-		
+		printf ("graph { \n");
 		for (j=0; j<NOMBRE_PAYS;j++){
 
 		if(strcasecmp("Europe",liste[j].region) == 0){
-		printf ("graph { \n");
 		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -535,16 +533,16 @@ switch(arguments->region){
 			}	
 			printf("</table>>\n");	
 			printf("];\n");
-			printf("}");
-		}	
+			
+		}
+		printf("}");	
 	}
 	break;
 
 		case OCEANIA:
-		
+		printf ("graph { \n");
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Oceania",liste[j].region) == 0){
-		printf ("graph { \n");
 		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -572,14 +570,16 @@ switch(arguments->region){
 			}	
 			printf("</table>>\n");	
 			printf("];\n");
-			printf("}");
-		}	
+			
+		}
+			
 	}
+	printf("}");
 	break;
 
 		case ALL:
-		for (j=0; j < NOMBRE_PAYS;j++){
 		printf ("graph { \n");
+		for (j=0; j < NOMBRE_PAYS;j++){
 		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -610,7 +610,9 @@ switch(arguments->region){
 			printf("}");
 			printf("\n");
 	}
+	printf("}");
 	break;
+	
 }
 }
 
