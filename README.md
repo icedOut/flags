@@ -10,8 +10,11 @@ d'été de l'UQAM
 
 ## Auteurs
 
-- Philippe Chatrand (CHAP24059408)
+- Philippe Chatrand (CHAP24059408
 
+**** note: l'etudiant Saad Aguenou était supposer faire le travail avec moi. il etait supposer faire la branche parse json. pendant 2 semaine, il disiait qu'il avancait sur sa branche local
+, cependant il na jamais commit des modifications. 5 jours avant la remise, il menvoie un message pour me dire que ses modifications ne fonctionnent pas et que je ferais mieux de l'oublier pour le tp3. Je l'ai donc
+supprimer du dépot et compléter le tp seul.
 
 
 ## Fonctionnement
@@ -41,6 +44,7 @@ Affiche le message d'aide et quitte
 #### --output-format FORMAT    
 
 Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
+                             cette version ne supporte pas le format  pn
                              
 
 #### --show-languages     
