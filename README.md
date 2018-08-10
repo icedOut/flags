@@ -63,27 +63,33 @@ Pour l'option PNG, voir la section Rediriger la sortie vers un nouveau fichier.
                           
                              
 
-#### --show-languages     
+#### --show-languages 
+
   
   afficher les langues parlées du pays
   
-#### --show-capital                 
+#### --show-capital  
+
 
 afficher les capitales
   
-#### --show-borders            
+#### --show-borders    
+
 
 afficher les frontières avec les autres pays
   
-#### --show-flag                
+#### --show-flag   
+
 
 afficher le drapeau du pays (seulement pour DOT et PNG)
                              
-#### --country COUNTRY         
+#### --country COUNTRY  
+
 
 le code du pays a afficher ( ex : can , usa );
   
-#### --region REGION           
+#### --region REGION    
+
 
 le continent a afficher les continents supportées sont 
 americas, africa, asia , europe et oceania
@@ -91,6 +97,7 @@ americas, africa, asia , europe et oceania
 		 
 
 ## Redirection de Sortie
+
 
 #### NOMFICHIER 
 le nom du fichier sortant. 
