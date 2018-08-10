@@ -2,6 +2,7 @@
 #include <string.h>
 #include <strings.h>
 #include "parse_args.h"
+#include <ctype.h>
 #include "pays.h"
 #include <string.h>
 #include <stdbool.h>
@@ -355,18 +356,18 @@ switch(arguments->format){
 
 		if(strcasecmp(arguments->country,liste[j].country_code) == 0 ){
 		printf ("graph { \n");
+		printf ("   %s [\n", liste[j].country_code);	
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
-		if ( arguments->show_languages){
+		if ( arguments->show_languages){	
 			printf("<tr><td align=\"left\" border=\"1\"><b>Language</b>:");
 		for (i = 0; i < liste[j].nb_languages ; i++){
 			printf ("%s ",liste[j].languages[i]);
@@ -394,13 +395,14 @@ switch(arguments->region){
 
 		if(strcasecmp("Africa",liste[j].region) == 0){
 		printf ("graph { \n");
+		printf ("   %s [\none", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
 
 		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
@@ -431,14 +433,14 @@ switch(arguments->region){
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Americas",liste[j].region) == 0){
 		printf ("graph { \n");
+		printf ("   %s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -468,14 +470,14 @@ switch(arguments->region){
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Asia",liste[j].region) == 0){
 		printf ("graph { \n");
+		printf ("%s [\n", liste[j].country_code);	
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -506,14 +508,14 @@ switch(arguments->region){
 
 		if(strcasecmp("Europe",liste[j].region) == 0){
 		printf ("graph { \n");
+		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -543,14 +545,14 @@ switch(arguments->region){
 		for (j=0; j<NOMBRE_PAYS;j++){
 		if(strcasecmp("Oceania",liste[j].region) == 0){
 		printf ("graph { \n");
+		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -578,14 +580,14 @@ switch(arguments->region){
 		case ALL:
 		for (j=0; j < NOMBRE_PAYS;j++){
 		printf ("graph { \n");
+		printf ("%s [\n", liste[j].country_code);
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
+		if (arguments->show_flags){
+		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
+		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
-
-		if (arguments->show_flags){
-		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"https://github.com/ablondin/countries/blob/png-flags/data/%s.png\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
-		}
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -615,7 +617,10 @@ switch(arguments->region){
 	break;
 
 	case PNG:
-	printf(" --- CAS NON-TRAITÉ --- " );
+	printf(" CAS TRAITÉ A L'AIDE DE LA REDIRECTION DES FICHIERS. UTILISER LE FORMAT DE SORTIE DOT, PUIS CONVERTISSEZ LE EN FORMAT PNG \n " );
+	printf(" Exemple: bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.dot \n");
+	printf(" dot -Tpng NOMFICHIER.dot >  NOMFICHIER.png \n");
+
 	break;
 }
 	free_arguments(arguments);
