@@ -88,14 +88,14 @@ americas, africa, asia , europe et oceania
 
 		 
 
-## Rediriger la sortie vers un nouveau fichier
+## Rediriger la sortie vers un nouveau fichier 
 
 #### NOMFICHIER 
 le nom du fichier sortant. 
 
  Ceci n'est pas un argument a utiliser pour appeler le programme,
 mais plutôt utiliser lors d'un appel avec redirection :
-par exemple, si vous voulez conservez les informations du canada en format dot, entrez la commende:
+par exemple, si vous voulez conservez les informations du canada en format dot, entrez la commande:
 
 
 ` bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capital > NOMFICHIER.dot`
@@ -104,6 +104,9 @@ Pour exporter le graphique DOT en format PNG, entrez la commande :
 
 ` dot -Tpng NOMFICHIER.dot >  NOMFICHIER.png `
 
+Si vous désirez conservez la sortie en mode texte, entrez la commande :
+
+` bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capital > NOMFICHIER.txt`
 
 
 
