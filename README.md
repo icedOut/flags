@@ -10,7 +10,7 @@ d'été de l'UQAM
 
 ## Auteurs
 
-- Philippe Chatrand (CHAP24059408
+- Philippe Chatrand (CHAP24059408)
 
 **** note: l'etudiant Saad Aguenou était supposer faire le travail avec moi. il etait supposer faire la branche parse json. pendant 2 semaine, il disiait qu'il avancait sur sa branche local
 , cependant il na jamais commit des modifications. 5 jours avant la remise, il menvoie un message pour me dire que ses modifications ne fonctionnent pas et que je ferais mieux de l'oublier pour le tp3. Je l'ai donc
@@ -32,6 +32,8 @@ Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
 Il est possible d'ajouter plusieurs options a l'éxécution du programme:
 
 # UTILISATION
+
+Pour lancer le programme, entrez la commande . les options entre entre [brackets] sont optionnelles.
 
   `bin/tp3 [--help] [--output-format FORMAT] [--show-languages] [--show-capital] [--show-borders] [--show-flag] [--country COUNTRY] [--region REGION]`
 
