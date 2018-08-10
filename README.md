@@ -5,6 +5,15 @@
 
 Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
+Voici les informations qui peuvent être afficher en option :
+
+ - capitale du pays
+ - langues officielles du pays
+ - frontières avec les autres
+ - drapeau du pays
+ 
+Par défaut, le programme affiche l'ensemble des pays du monde. Cependant, il est possible de réduire l'Affichage a un seul pays ou un seul contient.
+
 le projet utilise la base de donnée JSON du [project COUNTRIES](https://github.com/mledoze/countries)
 
 Projet présenté a Mr. Alexandre Blondin, dans le cadre du cours INF3135 - à la session
