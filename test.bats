@@ -58,3 +58,9 @@ BATS_TMPDIR="./tmp"
 	[ "${lines[1]}"  =  "   CAN [" ]
 }
 
+
+@test "Option format png" {
+	run bin/tp3 --output-format png
+	[ "$status" -eq 0 ] 
+	[ "${lines[0]}" = "--------------------------------------------------" ]
+}

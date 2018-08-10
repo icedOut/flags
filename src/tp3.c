@@ -624,9 +624,11 @@ switch(arguments->region){
 	break;
 
 	case PNG:
-	printf(" CAS TRAITÉ A L'AIDE DE LA REDIRECTION DES FICHIERS. UTILISER LE FORMAT DE SORTIE DOT, PUIS CONVERTISSEZ LE EN FORMAT PNG \n " );
-	printf(" Exemple: bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.dot \n");
-	printf(" dot -Tpng NOMFICHIER.dot >  NOMFICHIER.png \n");
+	printf("--------------------------------------------------\n");
+	printf(" CAS TRAITÉ A L'AIDE DE LA REDIRECTION DES FICHIERS. \n UTILISER LE FORMAT DE SORTIE DOT, \n PUIS CONVERTISSEZ LE EN FORMAT PNG \n" );
+	printf("--------------------------------------------------\n");
+	printf(" Entrez la commande: \n bin/tp3 --output-format dot --AUTRE-OPTIONS > NOMFICHIER.dot \n");
+	printf(" Puis, entrez la commande : \n  dot -Tpng NOMFICHIER.dot >  NOMFICHIER.png \n");
 
 	break;
 }
