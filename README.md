@@ -24,10 +24,8 @@ d'été de l'UQAM
 - Philippe Chatrand (CHAP24059408)
 
 **** note: l'etudiant Saad Aguenou était supposer faire le travail avec moi. il etait supposer faire la branche parse json. pendant 2 semaine, il affirmait qu'il avancait sur sa branche local
-, cependant il na jamais commit des modifications. 5 jours avant la remise, il m'envoie un message pour me dire que ses modifications ne fonctionnent pas et que je ferais mieux de l'oublier pour le tp3. Je l'ai donc
+, cependant il na jamais commit de modifications. 5 jours avant la remise, après avoir ignorer mes message pendant quelques jours il m'envoie un message pour me dire que ses modifications ne fonctionnent pas et que je ferais mieux de l'oublier pour le tp3. Je l'ai donc
 supprimer du dépot et compléter le tp seul. Il a donc eu accès à mon dépot et a mon code source pendant 2 semaine. Je vous met en garde en cas ou il remettrait un TP de son coté avec du code semblable au mien.
-Bref, j'aurais du écouter votre conseil lorsque vous disiez que les élèves qui n'ont pas d'équipes quelques jours après que l'énoncé ne sont pas les plus travaillant.
-
 
 
 ## Fonctionnement
