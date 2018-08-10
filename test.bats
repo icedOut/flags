@@ -54,6 +54,7 @@ BATS_TMPDIR="./tmp"
 @test "Option format dot" {
 	run bin/tp3 --output-format dot --country can
 	[ "$status" -eq 0 ]
-	[ "${lines[0]}" = "graph { " ]
-	[ "${lines[1]}"  =  "   shape = none," ]
+	[ "${lines[0]}" = "graph {" ]
+	[ "${lines[1]}"  =  "   CAN [" ]
 }
+
