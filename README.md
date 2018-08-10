@@ -3,7 +3,18 @@
 
 ## Description
 
-Description du projet en quelques phrases.
+Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
+
+Voici les informations qui peuvent être afficher en option :
+
+ - capitale du pays
+ - langues officielles du pays
+ - frontières avec les autres
+ - drapeau du pays
+ 
+Par défaut, le programme affiche l'ensemble des pays du monde. Cependant, il est possible de réduire l'Affichage a un seul pays ou un seul contient.
+
+le projet utilise la base de donnée JSON du [project COUNTRIES](https://github.com/mledoze/countries)
 
 Projet présenté a Mr. Alexandre Blondin, dans le cadre du cours INF3135 - à la session
 d'été de l'UQAM
@@ -12,13 +23,17 @@ d'été de l'UQAM
 
 - Philippe Chatrand (CHAP24059408)
 
+**** note: l'etudiant Saad Aguenou était supposer faire le travail avec moi. il etait supposer faire la branche parse json. pendant 2 semaine, il affirmait qu'il avancait sur sa branche local
+, cependant il na jamais commit des modifications. 5 jours avant la remise, il m'envoie un message pour me dire que ses modifications ne fonctionnent pas et que je ferais mieux de l'oublier pour le tp3. Je l'ai donc
+supprimer du dépot et compléter le tp seul. Il a donc eu accès à mon dépot et a mon code source pendant 2 semaine. Je vous met en garde en cas ou il remettrait un TP de son coté avec du code semblable au mien.
+Bref, j'aurais du écouter votre conseil lorsque vous disiez que les élèves qui n'ont pas d'équipes quelques jours après que l'énoncé ne sont pas les plus travaillant.
+
 
 
 ## Fonctionnement
 
-Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
-Le programme 
+
 
 Pour compiler le programme, entrez la commande `make`
 
@@ -29,6 +44,8 @@ Pour éxécuter le programme en mode par défault, entrez la commande `bin/tp3`.
 Il est possible d'ajouter plusieurs options a l'éxécution du programme:
 
 # UTILISATION
+
+Pour lancer le programme, entrez la commande . les options entre entre [brackets] sont optionnelles.
 
   `bin/tp3 [--help] [--output-format FORMAT] [--show-languages] [--show-capital] [--show-borders] [--show-flag] [--country COUNTRY] [--region REGION]`
 
@@ -41,6 +58,7 @@ Affiche le message d'aide et quitte
 #### --output-format FORMAT    
 
 Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
+                             cette version ne supporte pas le format  pn
                              
 
 #### --show-languages     
