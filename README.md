@@ -90,7 +90,7 @@ americas, africa, asia , europe et oceania
 
 		 
 
-## Rediriger la sortie vers un nouveau fichier 
+## Redirection de Sortie
 
 #### NOMFICHIER 
 le nom du fichier sortant. 
@@ -145,7 +145,9 @@ Si vous désirez conservez la sortie en mode texte, entrez la commande :
 - [x] Tests bats 
 - [x] Affichage Text
 - [x] Affichage dot
-- [x] Affichage PNG
+- [x] Affichage PNG 
+
+*** note : la sauvegarde en format png et dot avec un nom de fichier n'est pas intégrée dans le programme, mais disponible à la ligne de commande. (expliquée à l'utilisateur dans la section Redirection de sortie)
 
 
  
