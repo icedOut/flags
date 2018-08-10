@@ -57,7 +57,9 @@ Affiche le message d'aide et quitte
 
 #### --output-format FORMAT    
 
-Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
+Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut est text.
+
+Pour l'option PNG, voir la section Rediriger la sortie vers un nouveau fichier.
                           
                              
 
@@ -143,7 +145,7 @@ Si vous désirez conservez la sortie en mode texte, entrez la commande :
 - [x] Tests bats 
 - [x] Affichage Text
 - [x] Affichage dot
-- [] Affichage PNG
+- [x] Affichage PNG
 
 
  

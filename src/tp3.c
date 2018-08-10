@@ -421,8 +421,13 @@ switch(arguments->region){
 			printf("</table>>\n");	
 			printf("];\n");
 		}
-		printf("}");	
+
 	}
+	printf("}");
+		int h;
+		for(h=0; h<liste[j].nb_borders;h++){
+			printf("%s -- %s;\n",liste[j].country_code,liste[j].borders[h]);
+		}
 	break;
 
 		case AMERICAS:
@@ -534,8 +539,9 @@ switch(arguments->region){
 			printf("];\n");
 			
 		}
-		printf("}");	
+			
 	}
+	printf("}");
 	break;
 
 		case OCEANIA:
