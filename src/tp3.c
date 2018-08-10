@@ -353,9 +353,8 @@ switch(arguments->format){
 	case DOT:
 	if(arguments->country != NULL){
 	for (j=0; j<NOMBRE_PAYS;j++){
-
 		if(strcasecmp(arguments->country,liste[j].country_code) == 0 ){
-		printf ("graph { \n");
+		printf ("graph {\n");
 		printf ("   %s [\n", liste[j].country_code);	
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
@@ -363,7 +362,7 @@ switch(arguments->format){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -397,7 +396,7 @@ switch(arguments->region){
 		printf ("   shape = none,\n");
 		printf ("   label = <<table border=\"0\" cellspacing=\"0\">\n");
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 
 		if (arguments->show_flags){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
@@ -437,7 +436,7 @@ switch(arguments->region){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -474,7 +473,7 @@ switch(arguments->region){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -513,7 +512,7 @@ switch(arguments->region){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -550,7 +549,7 @@ switch(arguments->region){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -587,7 +586,7 @@ switch(arguments->region){
 		printf ("    <tr><td align=\"center\" border=\"1\" fixedsize=\"true\" width=\"200\" height=\"100\"><img src=\"./DATA/data/%s.PNG\" scale=\"true\"/></td></tr>\n",liste[j].country_code);
 		}
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country);
-		printf ("<tr><td align=\"left\" border=\"1\"><b>Name</b>: %s </td></tr>\n",liste[j].country_code);
+		printf ("<tr><td align=\"left\" border=\"1\"><b>Code</b>: %s </td></tr>\n",liste[j].country_code);
 		if (arguments->show_capitals){
 		printf ("<tr><td align=\"left\" border=\"1\"><b>Capital</b>: %s</td></tr>\n",liste[j].capital);
 		}	
@@ -612,7 +611,7 @@ switch(arguments->region){
 	}
 	printf("}");
 	break;
-	
+
 }
 }
 
