@@ -58,7 +58,7 @@ Affiche le message d'aide et quitte
 #### --output-format FORMAT    
 
 Choisir le format de sortie ( dot , png ou text ). le format reconnu par graphviz est dot. le format par défaut text.
-                             cette version ne supporte pas le format  pn
+                          
                              
 
 #### --show-languages     
@@ -98,12 +98,14 @@ mais plutôt utiliser lors d'un appel avec redirection :
 par exemple, si vous voulez conservez les informations du canada en format dot, entrez la commende:
 
 
-` bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.dot`
+` bin/tp3 --output-format dot --country can --show-languages --show-borders --show-capital > NOMFICHIER.dot`
 
-Pour conserver les traces en version texte, utiliser plutot
+Pour exporter le graphique DOT en format PNG, entrez la commande :
+
+` dot -Tpng NOMFICHIER.dot >  NOMFICHIER.png `
 
 
-` bin/tp3 --output-format text --country can --show-languages --show-borders --show-capîtal > NOMFICHIER.txt`
+
 
 ## Plateformes supportées
 
