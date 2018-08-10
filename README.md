@@ -3,7 +3,9 @@
 
 ## Description
 
-Description du projet en quelques phrases.
+Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
+
+le projet utilise la base de donnée JSON du [project COUNTRIES](https://github.com/mledoze/countries)
 
 Projet présenté a Mr. Alexandre Blondin, dans le cadre du cours INF3135 - à la session
 d'été de l'UQAM
@@ -21,9 +23,8 @@ Bref, j'aurais du écouter votre conseil lorsque vous disiez que les élèves qu
 
 ## Fonctionnement
 
-Le but de ce programme est d'afficher un ou plusieurs pays ainsi que leurs informations, selon les arguments entrées.
 
-Le programme 
+
 
 Pour compiler le programme, entrez la commande `make`
 
